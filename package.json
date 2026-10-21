@@ -1,0 +1,7 @@
+{
+  "name": "retaillens",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": { "verify": "node scripts/verify.mjs" },
+  "devDependencies": { "@electric-sql/pglite": "0.3.14" }
+}

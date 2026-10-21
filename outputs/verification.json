@@ -1,0 +1,16 @@
+{
+  "engine": "PGlite (PostgreSQL compiled to WebAssembly)",
+  "dependency": {
+    "@electric-sql/pglite": "0.3.14"
+  },
+  "checks": 11,
+  "totals": {
+    "customers": 10000,
+    "orders": 36000,
+    "items": 71986,
+    "return_events": 9035,
+    "booked_sales": "14106927.30",
+    "refunds": "951104.75",
+    "net_sales": "13155822.55"
+  }
+}
