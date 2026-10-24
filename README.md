@@ -1,5 +1,7 @@
 # RetailLens: Revenue, Retention & Returns
 
+[![SQL verification](https://github.com/RipLiquid/RetailLens/actions/workflows/ci.yml/badge.svg)](https://github.com/RipLiquid/RetailLens/actions/workflows/ci.yml)
+
 A reproducible PostgreSQL portfolio project answering a practical question:
 **Which customers and products drive revenue after returns, and where should the business focus next?**
 
@@ -83,3 +85,7 @@ outputs/                   Reproducible evidence from the verification run
 To make this your own, add a documented real dataset, adapt the model, rerun the checks, and replace the findings with your own decision memo. Never present generated transactions as real company experience.
 
 Technical references: [PostgreSQL EXPLAIN documentation](https://www.postgresql.org/docs/current/using-explain.html), [series generation](https://www.postgresql.org/docs/current/functions-srf.html), and [window functions](https://www.postgresql.org/docs/current/tutorial-window.html).
+
+## Continuous integration
+
+GitHub Actions runs the SQL verification on every push and pull request, and can also be started manually from the Actions tab. Each run uses Node.js 24, installs the locked dependencies, and rebuilds the synthetic data in a fresh PGlite database. SQL errors or failing data-quality checks fail the job. Generated reports and query plans are available as a verification-results artifact for 14 days. The workflow verifies execution and correctness; it does not compare timing-sensitive query plans against committed output files.
